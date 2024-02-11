@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for publication in publications %}
+<h2>{{ publication.titre }}</h2>
+<img src="{{ publication.thumbnail.url }} " alt="image de la publication {{ publication.name }}"
+     style="max-width: 350px; max-height: 300px;">
+<p>
+    <a href="{{ product.get_absolute_url }}">
+        <button>
+            Voir l'image
+        </button>
+    </a>
+
+</p>
+
+
+{% endfor %}
+
+{% endblock %}
